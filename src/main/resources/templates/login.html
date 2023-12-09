@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 id="title_login">Login</h1>
+
+    <div class="container">
+        <form method="post" id="form_login" th:action="@{/login}" th:object="${user}">
+            <p>
+                <label>Nome: </label>
+                <input type="text" id="input_login" th:field="*{name}"/>
+            </p>
+            <button type="submit" id="botao_login">Cadastrar</button>
+        </form>
+    </div>
+
+
+</body>
+</html>

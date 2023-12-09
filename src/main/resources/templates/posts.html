@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <a href="/new_post" id="botao_posts">Adicionar post</a>
+
+    <p id="posts_title">Posts do Usuário:</p>
+    <div id="posts">
+        <p th:each="p : ${posts}" id="post">
+            <span th:text="${p.getContent()}"></span>
+        </p>
+    </div>
+</body>
+</html>
